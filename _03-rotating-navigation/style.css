@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,200&display=swap');
+
+:root {
+    --ff-ppal : 'Nunito', sans-serif;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%
+    
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+      font-family: var(--ff-ppal);
+      background-color: #333;
+      color: #222;
+      margin: 0;
+      overflow-x: hidden;
+  }
+
+  h1 {
+      font-size: 3rem;
+  }
+  h2 {
+      font-size: 2.5rem;
+  }
+  h3 {
+      font-size: 2rem;
+  }
+  p {
+      font-size: 1.6rem;
+  }
+
+  .container {
+    background-color: #fafafa;
+      transform-origin: top left;
+      transition: transform 0.5 linear;
+      width: 100vw;
+      min-height: 100vh;
+      padding: 5rem;
+  }
+
+  .container.show-nav {
+      transform: rotate(-20deg)
+  }
+  .container.show-nav + nav li {
+      transform: translateX(0);
+      transition-delay: 0.3s;
+  }
+
+  .container.show-nav .circle {
+      transform: rotate(-70deg);
+  }
+
+  nav {
+      
+      position: fixed;
+      bottom: 4rem;
+      left: 0;
+      z-index: 100;
+  }
+
+  nav ul {
+      list-style-type: none;
+      padding-left: 3rem;
+  }
+
+  nav ul li {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    transform: translateX(-100%);
+    color: #fff;
+    margin: 4rem 0;
+    font-size: 1.3rem;
+    transition: transform .2s ease;
+  }
+  nav ul li + li {
+    margin-left: 1.5rem;
+    transform: translateX(-150%);
+  }
+  nav ul li + li + li {
+    margin-left: 3rem;
+    transform: translateX(-200%);
+  }
+  nav ul li i {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+  .circle-container {
+      position: fixed;
+      top: -100px;
+      left: -100px;
+  }
+
+  .circle {
+      background-color: #ff7979;
+      height: 20rem;
+      width: 20rem;
+      border-radius: 50%;
+      position: relative;
+      transition: transform 0.5s linear;
+  }
+
+  .circle button {
+    cursor: pointer;  
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 10rem;
+      background: transparent;
+      border: 0;
+      font-size: 2.6rem;
+      color: white;
+  }
+
+  .circle button:focus {
+      outline: none;
+  }
+
+  .circle button#open {
+      left: 60%;
+  }
+
+  .circle button#close {
+      top: 60%;
+      transform: rotate(90deg);
+      transform-origin: top left;
+  }
+
+  .content img {
+      max-width: 100%;
+  }
+
+  .content {
+      max-width: 120rem;
+      margin: 5rem auto;
+
+  }
+
+  .content h1 {
+      margin: 0;
+  }
+
+  .content p {
+      color: #333;
+      line-height: 1.5;
+  }
+  .content small {
+      color: #555;
+      font-style: italic;
+  }
