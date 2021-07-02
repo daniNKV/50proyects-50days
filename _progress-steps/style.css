@@ -2,6 +2,9 @@
 
 :root {
     --ff-ppal : 'Nunito', sans-serif;
+    --clr-azul : #3498db;
+    --clr-gris : #e0e0e0;
+    --clr-bg : #f6f7fb;
 }
 html {
     box-sizing: border-box;
@@ -11,21 +14,112 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
-
+  
   body {
-      font-family: --var(--ff-ppal);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      overflow: hidden
+    background-color: var(--clr-bg);  
+    font-family: --var(--ff-ppal);
+    font-weight: 400;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
   }
 
   h1 {
-      font-size: 3rem;
+    font-size: 3rem;
   }
   p {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .progreso-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 3rem;
+    max-width: 100%;
+    width: 35rem;
+  }
+
+  .progreso-container::before {
+    content: '';     
+    background-color: var(--clr-gris);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 0.4rem;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: -1;
+
+  }
+
+  .progreso {
+    background-color: var(--clr-azul);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 0.4rem;
+    width: 0%;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: .4s ease
+  }
+
+  .circle {
+    background-color: white;
+    color: var(--clr-gris);
+    font-family: var(--ff-ppal);
+    font-size: 1.4rem;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .3rem solid ;
+    transition: .4s ease;
+  }
+
+  .circle.activo {
+      border-color: var(--clr-azul);
+      color: var(--clr-azul);
+      font-weight: 900;
+  }
+
+  .btn {
+      background-color: var(--clr-azul);
+      color: #fff;
+      border: 0;
+      border-radius: .6rem;
+      box-shadow: 0px 2.5px 5px rgba(138, 138, 138, 0.685); ;
+      cursor: pointer;
+      font-family: inherit;
+      padding: 1rem 4rem;
+      margin: .5rem;
       font-size: 1.6rem;
+      font-weight: 700;
+      font-family: var(--ff-ppal);
+  }
+
+  .btn:active {
+      transform: scale(.98)
+  }
+
+  .btn:focus {
+      outline: none;
+  }
+
+  .btn:disabled {
+      background-color: var(--clr-gris);
+      cursor: not-allowed;
+      box-shadow: none;
+      
   }
