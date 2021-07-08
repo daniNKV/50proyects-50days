@@ -13,6 +13,8 @@ html {
   }
 
   body {
+    background-color: #333;
+    font-size: 16px;
     font-family: var(--ff-ppal);  
     font-weight: 400;
     display: flex;
@@ -22,6 +24,7 @@ html {
     margin: 0;
     overflow: hidden;
     height: 100vh;
+    text-align: center;
 
   }
 
@@ -35,4 +38,27 @@ html {
       font-size: 1.6rem;
   }
 
+.key {
+  border: 1px solid #999;
+  background-color: #eee;
+  box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+  display: inline-flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 2rem;
+  flex-direction: column;
+  margin: 1rem;
+  min-width: 15rem;
+  position: relative;
+}
 
+.key small {
+  position: absolute;
+  top: -2.5rem;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: #999;
+  font-size: 1.4rem;
+}
