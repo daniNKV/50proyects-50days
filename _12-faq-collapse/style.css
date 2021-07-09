@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;600&display=swap');
 :root {
-    --ff-ppal : 'Poppins', sans-serif;
+    --ff-ppal : 'Muli', sans-serif;
 }
 html {
     box-sizing: border-box;
@@ -14,25 +13,112 @@ html {
 
   body {
     font-family: var(--ff-ppal);  
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    overflow: hidden;
-    height: 100vh;
+    background-color: #f0f0f0;
+    font-size: 16px;
 
   }
 
   h1 {
-      font-size: 4rem;
+    margin: 5rem 0 3rem;  
+    font-size: 4rem;
+    text-align: center;
   }
   h2 {
       font-size: 3.5rem;
   }
+  h3 {
+    font-size: 2.1rem;
+  }
   p {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
+      font-weight: 300;
   }
 
+.faq-container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
 
+.faq {
+  background-color: transparent;
+  border: 1px solid #9fa4a8;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq.active {
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1),
+              0 3px 6px rgba(0,0,0,0.1);
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  color: #2ecc71;
+  font-size: 9rem;
+  position: absolute;
+  opacity: .25;
+  bottom: 2rem;
+  right: 5rem;
+  z-index: 0;
+}
+.faq.active::before {
+  color: #3498db;
+  bottom: -.5rem;
+  right: 2rem;
+  transform: rotateY(180deg);
+}
+
+.faq-title {
+  margin: 0 3.5rem 0 0;
+  
+}
+
+.faq-text {
+  display: none;
+  margin: 3rem 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-toggle {
+  background-color: transparent;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  height: 3rem;
+  width: 3rem;
+}
+
+.faq-toggle:focus {
+  outline: none;
+}
+.faq-toggle .fa-times {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times{
+  display: block;
+}
+.faq.active .faq-toggle .fa-chevron-down{
+  display: none;
+}
+.faq.active .faq-toggle {
+  background-color: #9fa4a8;
+  color: #fff;
+}
