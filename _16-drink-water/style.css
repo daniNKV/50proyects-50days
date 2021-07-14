@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
+
+:root {
+    --ff-ppal : 'Montserrat', sans-serif;
+
+    --clr-border: #144fc6;
+    --clr-fill: #6ab3f8;
+
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    background-color: #3494e4;
+    color: #fff;
+    font-family: var(--ff-ppal);  
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+
+  }
+
+  h1 {
+      font-size: 3.5rem;
+      margin: 2rem 0 0;
+  }
+  h2 {
+      font-size: 3rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 1rem 0;
+  }
+  p {
+      font-size: 1.6rem;
+  }
+
+  .cup {
+    background-color: #fff;
+    border: .4rem solid var(--clr-border);
+    color: var(--clr-border);
+    border-radius: 0 0 4rem 4rem;
+    height: 330px;
+    width: 15rem;
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+.cup.cup-small {
+  height: 9.5rem;
+  width: 5rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  background-color: rgba(255,255,255,0.9);
+  cursor: pointer;
+  font-size: 1.4rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: .5rem;
+  transition: 0.3s ease;
+}
+
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  width: 28rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.cup.cup-small.full {
+  background-color: var(--clr-fill);
+  color: #fff;
+}
+
+.remained {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  transition: 0.3s ease;
+}
+
+.remained span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.remained small {
+  font-size: 1.2rem;
+}
+
+.percentage {
+  background-color: var(--clr-fill);
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  height: 0;
+  transition: 0.3s ease;
+}
+
+.text {
+  text-align: center;
+  margin: 0 0 .5rem;
+}
