@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+:root {
+    --ff-ppal : 'Poppins', sans-serif;
+    --clr-ppal : #22254b;
+    --clr-sec : #373b69;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-family: var(--ff-ppal);  
+    background-color: var(--clr-ppal);
+    font-size: 16px;
+    margin: 0;
+
+
+  }
+
+  header {
+    background-color: var(--clr-sec);
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  h1 {
+      font-size: 4rem;
+  }
+  h2 {
+      font-size: 3.5rem;
+  }
+  h3 {
+    text-align: center;
+  }
+  p {
+      font-size: 1.6rem;
+  }
+
+
+.search {
+  background-color: transparent;
+  border: 2px solid var(--clr-ppal);
+  border-radius: 5rem;
+  font-family: inherit;
+  padding: 0.5rem 2rem;
+  color: #fff;
+}
+.search::placeholder {
+  color: #7378c5;
+}
+
+.search:focus {
+  outline: none; 
+  background-color: var(--clr-ppal);
+}
+@media (max-width: 768px ) {
+  header {
+    justify-content: center;
+  }
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.movie {
+  width: 30rem;
+  margin: 1rem;
+  background-color: var(--clr-sec);
+  box-shadow: 2px 4px 5px rgba(0,0,0, .2);
+  position: relative;
+  overflow: hidden;
+  border-radius: .3rem;
+}
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 1rem 1rem;
+  letter-spacing: .7px;
+}
+
+.movie:hover {
+  transform: scale(1.02);
+  box-shadow: 1px 4px 15px rgba(0,0,0, .6);
+  transition: box-shadow .5s ease-in, transform .3s ease;
+}
+.movie:hover .overview {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+}
+
+.movie-info span {
+  background-color: var(--clr-ppal);
+  padding: .25rem .5rem;
+  border-radius: .3rem;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: lightgreen;
+}
+.movie-info span.orange {
+  color: orange;
+}
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  background-color: #ececec;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%)
+}
