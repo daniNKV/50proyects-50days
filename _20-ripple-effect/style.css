@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Open-Sans:wght@200;400;700&display=swap');
+
+:root {
+    --ff-ppal : 'Open-Sans', sans-serif;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    background-color: #222;
+    font-family: var(--ff-ppal);  
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+
+  }
+
+  h1 {
+      font-size: 4rem;
+  }
+  h2 {
+      font-size: 3.5rem;
+  }
+  p {
+      font-size: 1.6rem;
+  }
+
+  button {
+    background-color: purple;
+    color: white;
+    border: 1px purple solid;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    padding: 2rem 3rem;
+    overflow: hidden;
+    margin: 1rem 0;
+    position: relative;
+  }
+
+  button .circle {
+    position: absolute;
+    background-color: white;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale .5s ease-out;
+  }
+  button:focus {
+    outline: none;
+  }
+
+  @keyframes scale {
+    to {
+      transform: translate(-50%, -50%) scale(3);
+      opacity: 0;
+    }
+  }
