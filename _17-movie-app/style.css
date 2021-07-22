@@ -79,6 +79,7 @@ main {
   position: relative;
   overflow: hidden;
   border-radius: .3rem;
+  
 }
 .movie img {
   width: 100%;
@@ -91,6 +92,7 @@ main {
   justify-content: space-between;
   padding: .5rem 1rem 1rem;
   letter-spacing: .7px;
+  
 }
 
 .movie:hover {

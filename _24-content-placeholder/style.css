@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Open-Sans:wght@200;400&display=swap');
+
+:root {
+    --ff-ppal : 'Open-Sans', sans-serif;
+
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-family: var(--ff-ppal);  
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+
+  }
+
+  h1 {
+      font-size: 4rem;
+  }
+  h2 {
+      font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+
+  }
+  p {
+      font-size: 1.6rem;
+      line-height: 1.5;
+      text-indent: .5rem;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .card {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 35rem;
+  }
+
+  .card-header {
+    height: 20rem;
+  }
+  .card-header img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .card-content {
+    background-color: #fff;
+    padding: 3rem;
+  }
+
+  .card-title {
+    height: 2rem;
+    margin: 0;
+  }
+
+  .card-excerpt {
+    color: #777;
+    margin: 1rem 0 2rem;
+  }
+  .author {
+    display: flex;
+    font-size: 1.6rem;
+  }
+
+  .profile-img {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .author-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 1rem;
+    width: 10rem;
+  }
+
+
