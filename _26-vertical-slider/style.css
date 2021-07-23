@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;400&display=swap');
+
+:root {
+    --ff-ppal : 'Open Sans', sans-serif;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: var(--ff-ppal);  
+    font-size: 16px;
+    font-weight: 400;
+    height: 100vh;
+
+  }
+
+  h1 {
+      font-size: 4rem;
+  }
+  h2 {
+      font-size: 3.5rem;
+  }
+  p {
+      font-size: 1.6rem;
+  }
+
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-slide {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.left-slide > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.left-slide h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  margin-top: -3rem;
+}
+
+.right-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+}
+
+.right-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  color: #666;
+  font-size: 1.6rem;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #111
+}
+button:active {
+  outline: none;
+}
+
+.slider-container .action-buttons button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+}
+
+.slider-container .action-buttons .down-btn {
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  transform: translateX(-100%);
+
+}
+.slider-container .action-buttons .up-btn {
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  transform: translateY(-100%);
+
+}
