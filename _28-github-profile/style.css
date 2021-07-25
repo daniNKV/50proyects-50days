@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+    --ff-ppal : 'Poppins', sans-serif;
+    --clr-bg : #2a2a72;
+    --clr-bg2: #4c2885;
+    --box-shadow : 0 5px 10px rgba(154,160,185, 0.05), 0 15px 40px rgba(0,0,0, 0.1)
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    background-color: var(--clr-bg) ;
+    font-family: var(--ff-ppal);  
+    font-weight: 400;
+    color: #fff;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+
+  }
+
+  h1 {
+      font-size: 4rem;
+  }
+  h2 {
+      font-size: 3rem;
+  }
+  p {
+      font-size: 1.6rem;
+  }
+
+  .user-form {
+    width: 100%;
+    max-width: 70rem;
+  }
+
+  .user-form input {
+    width: 100%;
+    display: block;
+    background-color: var(--clr-bg2);
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    padding: 1.6rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+    font-size: 1.6rem;
+    box-shadow: var(--box-shadow);
+  }
+  .user-form input::placeholder {
+    color: #bbb;
+  }
+
+  .user-form input:focus {
+    outline: none;
+  }
+
+  .card {
+    max-width: 80rem;
+    background-color: var(--clr-bg2);
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    padding: 3rem;
+    margin: 0 1.5rem;
+  }
+
+  .avatar {
+    border-radius: 50%;
+    border: 10px solid #2a2a72;
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .user-info {
+    color: #eee;
+    margin-left: 3.2rem;
+  }
+
+  .user-info h2 {
+    margin-top: 0;
+  }
+
+  .user-info ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 40rem;
+  }
+
+  .user-info ul li {
+    display: flex;
+    align-items: center;
+  }
+
+  .user-info ul li strong {
+    font-size: 1.5rem;
+    margin-left: .8rem;
+  }
+
+  .repo {
+    text-decoration: none;
+    color: #fff;
+    background-color: #212a72;
+    font-size: 1.3rem;
+    padding: .4rem .8rem;
+    margin-right: .8rem;
+    margin-bottom: .8rem;
+    display: inline-block;
+  }
+
+  @media (max-width: 500px ) {
+    .card {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .user-form {
+      max-width: 40rem;
+    }
+    .user-info {
+      margin-left: 0;
+    }
+    .user-info h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .user-info p {
+      margin-top: 0;
+    }
+
+  }
